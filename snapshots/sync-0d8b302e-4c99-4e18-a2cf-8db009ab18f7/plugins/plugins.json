@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "plugins": [
+    {
+      "name": "@vectorize-io/hindsight-coding-agents",
+      "version": "0.8.4",
+      "spec": "0.8.4",
+      "isBundle": true,
+      "inBundles": [
+        "@vectorize-io/hindsight-coding-agents"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "dsh-better-sidebar",
+      "version": "0.28.2",
+      "spec": "0.28.2",
+      "isBundle": true,
+      "inBundles": [
+        "dsh-better-sidebar"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "dsh-builtin-browser",
+      "version": "0.4.15",
+      "spec": "0.4.15",
+      "isBundle": true,
+      "inBundles": [
+        "dsh-builtin-browser"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "dsh-zcode-startplan",
+      "version": "0.5.2",
+      "spec": "0.5.2",
+      "isBundle": true,
+      "inBundles": [
+        "dsh-zcode-startplan"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "dshmarket",
+      "version": "1.73.4",
+      "spec": "^1.73.4",
+      "isBundle": true,
+      "inBundles": [
+        "dshmarket"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-auto-review",
+      "version": "",
+      "isBundle": true,
+      "inBundles": [
+        "@deepseek-ai/dsh-experimental-auto-review"
+      ],
+      "enabled": true,
+      "bundlesOnly": true
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-inspector-profile",
+      "version": "",
+      "isBundle": true,
+      "inBundles": [
+        "@deepseek-ai/dsh-experimental-inspector-profile"
+      ],
+      "enabled": true,
+      "bundlesOnly": true
+    }
+  ],
+  "patch": [
+    {
+      "file": "profiles/desktop/cordis.patch.yml",
+      "lineId": "agent-default-model",
+      "raw": {
+        "id": "agent-default-model",
+        "name": "@deepseek-ai/dsh-agent-default-model",
+        "config": {
+          "provider": "zcode-start-plan",
+          "model": "GLM-5.3-Flash",
+          "reasoningEffort": "max"
+        }
+      }
+    },
+    {
+      "file": "profiles/desktop/cordis.patch.yml",
+      "lineId": "ui-settings-account",
+      "raw": {
+        "id": "ui-settings-account",
+        "name": "@deepseek-ai/dsh-client-ui-settings-account",
+        "config": {
+          "version": 1,
+          "step": "done",
+          "purpose": "development",
+          "process": "detailed",
+          "completion": "completed",
+          "usage": "detailed",
+          "developerTools": true
+        }
+      }
+    },
+    {
+      "file": "profiles/desktop/cordis.patch.yml",
+      "lineId": "ui-chat",
+      "raw": {
+        "id": "ui-chat",
+        "name": "@deepseek-ai/dsh-client-ui-chat",
+        "config": {
+          "transcriptView": "detailed",
+          "performanceUsage": "detailed"
+        }
+      }
+    },
+    {
+      "file": "profiles/desktop/cordis.patch.yml",
+      "lineId": "ui-settings",
+      "raw": {
+        "id": "ui-settings",
+        "name": "@deepseek-ai/dsh-client-ui-settings",
+        "config": {
+          "enabled": true
+        }
+      }
+    },
+    {
+      "file": "profiles/desktop/cordis.patch.yml",
+      "lineId": "session-log-deepseek",
+      "raw": {
+        "id": "session-log-deepseek",
+        "name": "@deepseek-ai/dsh-session-log-deepseek",
+        "config": {
+          "enabled": false
+        }
+      }
+    },
+    {
+      "file": "profiles/desktop/cordis.patch.yml",
+      "lineId": "better-sidebar",
+      "raw": {
+        "id": "better-sidebar",
+        "name": "dsh-better-sidebar",
+        "config": {
+          "agentOpenTools": true
+        }
+      }
+    }
+  ],
+  "pnpmWorkspace": "packages:\n  - .\n\nnodeLinker: hoisted\nautoInstallPeers: false\nminimumReleaseAgeExclude:\n  - dsh-config-manager@0.2.2\n  - '@vectorize-io/hindsight-coding-agents@0.8.4'\nallowBuilds:\n  '@dsh-external/dsh-super-injector': true\n  '@dsh-external/dsh-super-injector@https://codeload.github.com/yjh051108/dsh-routing-suite/tar.gz/195273352f23bff7f9023ebe2ec0cdbdf9c98f10': true\n"
+}
