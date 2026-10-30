@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "plugins": [
+    {
+      "name": "dshmarket",
+      "version": "1.73.4",
+      "spec": "^1.73.4",
+      "isBundle": true,
+      "inBundles": [
+        "dshmarket"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-auto-review",
+      "version": "",
+      "isBundle": true,
+      "inBundles": [
+        "@deepseek-ai/dsh-experimental-auto-review"
+      ],
+      "enabled": true,
+      "bundlesOnly": true
+    },
+    {
+      "name": "@deepseek-ai/dsh-experimental-inspector-profile",
+      "version": "",
+      "isBundle": true,
+      "inBundles": [
+        "@deepseek-ai/dsh-experimental-inspector-profile"
+      ],
+      "enabled": true,
+      "bundlesOnly": true
+    }
+  ],
+  "patch": [
+    {
+      "file": "profiles/desktop/cordis.patch.yml",
+      "lineId": "agent-default-model",
+      "raw": {
+        "id": "agent-default-model",
+        "name": "@deepseek-ai/dsh-agent-default-model",
+        "config": {
+          "provider": "deepseek-account",
+          "model": "deepseek-flash",
+          "reasoningEffort": "max"
+        }
+      }
+    },
+    {
+      "file": "profiles/desktop/cordis.patch.yml",
+      "lineId": "ui-settings-account",
+      "raw": {
+        "id": "ui-settings-account",
+        "name": "@deepseek-ai/dsh-client-ui-settings-account",
+        "config": {
+          "version": 1,
+          "step": "done",
+          "purpose": "development",
+          "process": "detailed",
+          "completion": "completed",
+          "usage": "detailed",
+          "developerTools": true
+        }
+      }
+    },
+    {
+      "file": "profiles/desktop/cordis.patch.yml",
+      "lineId": "ui-chat",
+      "raw": {
+        "id": "ui-chat",
+        "name": "@deepseek-ai/dsh-client-ui-chat",
+        "config": {
+          "transcriptView": "detailed",
+          "performanceUsage": "detailed"
+        }
+      }
+    },
+    {
+      "file": "profiles/desktop/cordis.patch.yml",
+      "lineId": "ui-settings",
+      "raw": {
+        "id": "ui-settings",
+        "name": "@deepseek-ai/dsh-client-ui-settings",
+        "config": {
+          "enabled": true
+        }
+      }
+    },
+    {
+      "file": "profiles/desktop/cordis.patch.yml",
+      "lineId": "session-log-deepseek",
+      "raw": {
+        "id": "session-log-deepseek",
+        "name": "@deepseek-ai/dsh-session-log-deepseek",
+        "config": {
+          "enabled": false
+        }
+      }
+    }
+  ],
+  "pnpmWorkspace": "packages:\n  - .\n\nnodeLinker: hoisted\nautoInstallPeers: false\nminimumReleaseAgeExclude:\n  - dsh-config-manager@0.2.2\n"
+}

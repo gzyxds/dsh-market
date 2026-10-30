@@ -1,0 +1,38 @@
+{
+  "id": "sync-aea6aa2e-a72e-40d8-837b-9ce7a424aee1",
+  "createdAt": "2026-10-30T19:07:03.388Z",
+  "manifest": {
+    "schemaVersion": 1,
+    "dshVersion": "0.2.1-rc.5",
+    "platform": "win32",
+    "sectionIds": [
+      "settings",
+      "ui",
+      "providers",
+      "plugins",
+      "prompts",
+      "skills",
+      "agentPresets",
+      "agentInstructions",
+      "self",
+      "mcp"
+    ],
+    "containsSecrets": false,
+    "transport": "git",
+    "sourceHome": "C:\\Users\\34831\\.dsh",
+    "deviceId": "092a269e-9f8f-4df3-8f67-a7240a33428f",
+    "deviceName": "DESKTOP-EAK9M4P"
+  },
+  "sectionHashes": {
+    "settings": "132517c6c9c228c9155d1cfc246551043b932668bd04c38b002526e402cb603f",
+    "ui": "80978e7be56d94ff304f33196edab63d0a88159963ec4e66165754366dafa856",
+    "providers": "2003225321cd1d2cbe14ea8d404d5827e3a1fb58770ede98f95756da3567e72b",
+    "plugins": "a02f42e9c6cdd0fff52e6fc137a3d6bef5d476f3be5be2f2f639cd2ce9706685",
+    "prompts": "23d05fd89e9e61985416d8fb3dfc30e5aae4298aa4f684f2a0391b49d70e8cfd",
+    "skills": "2fe09dfb1ef1f6216d00cf7c1a1e3380349f61fe0ea40c3ea8dcb76e9d670eea",
+    "agentPresets": "2fe09dfb1ef1f6216d00cf7c1a1e3380349f61fe0ea40c3ea8dcb76e9d670eea",
+    "agentInstructions": "2fe09dfb1ef1f6216d00cf7c1a1e3380349f61fe0ea40c3ea8dcb76e9d670eea",
+    "self": "e669d0b88ca5e62ffa42360093828f51a64295b475b469cd492e4cfd74965e0e",
+    "mcp": "d5f4bb30627f342c5625dfe6a6d7a282874bd8121b32dbdd2004756e4b1ad8cf"
+  }
+}
