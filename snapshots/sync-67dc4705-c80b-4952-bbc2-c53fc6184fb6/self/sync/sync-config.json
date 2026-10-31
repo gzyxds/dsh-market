@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 3,
+  "transport": "webdav",
+  "git": {
+    "repoUrl": "https://github.com/gzyxds/dsh-market"
+  },
+  "webdav": {
+    "url": "https://dav.jianguoyun.com/dav/",
+    "username": "236749035@qq.com"
+  }
+}
